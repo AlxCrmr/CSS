@@ -1,0 +1,76 @@
+.menu2 {
+    position:fixed;
+    top: 15px;
+    right: 15px;
+    cursor:pointer;
+    z-index: 9;
+    transition: right .3s ease-in-out;
+
+    div {
+        background-color: #63b6e3;
+        width: 35px;
+        height: 5px;
+        margin-bottom: 8px;
+        transition: opacity .5s, background-color .25s, transform .5s ease-in-out;
+    }
+
+    &.active {
+        right: 250px;
+    }
+
+    &.active div {
+        background-color: $menu2Color;
+    }
+
+    &.active .top {
+        transform: translateY(10px) rotate(-135deg);
+    }
+
+    &.active .middle {
+        opacity: 0;
+    }
+
+    &.active .bottom {
+        transform: translateY(-15px) rotate(-45deg);
+    }
+}
+
+.menu-box {
+    position: fixed;
+    top: 0px;
+    right: -300px;
+    background-color: #a6cbe0;
+    padding: 60px;
+    width: 300px;
+    height: 100%;
+    color: $menu2Color;
+    opacity: 0;
+    z-index: 1;
+    transition: all .35s ease-in-out;
+
+    &.active {
+        right:0px;
+        opacity: 1;
+    }
+
+    .menu2-items {
+        position: relative;
+        width: 100%;
+        font-size: 1.5rem;
+    }
+
+    .menu2-items .item {
+        position: relative;
+        cursor: pointer;
+        padding: 15px 40px;
+        transition: all .25s;
+        width: 300px;
+        right: 60px;
+
+        &:hover {
+            padding: 15px 50px;
+            background-color: #bbdbed;
+        }
+    }
+
+}

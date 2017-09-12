@@ -1,0 +1,64 @@
+.menu1{
+    position: relative;
+    color: #FFF;
+    cursor: pointer;
+
+    .fa-bars {
+        background-color: #00b02c;
+    }
+}
+.menu1 span {
+    font-size: 1.5rem;
+}
+
+.menu1 span, .menu1-items span {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px #FFF solid;
+    text-align: center;
+    line-height: 45px;
+    transition: all 0.3s ease-in-out;
+    position: absolute;
+    top: -50px;
+    left:10px;
+}
+
+
+
+.menu1-items a{
+    font-size: 1.5rem;
+    color: #FFF;
+    &:active {
+        color: #FFF;
+    }
+}
+.fa-github {
+    background-color: $githubGrey;
+    opacity: 0;
+    &.show {
+        transform: rotate(42deg) translate(90px) rotate(-42deg);
+        transition: all .2s ease-in-out;
+        opacity: 1;
+    }
+}
+
+.fa-twitter {
+    background-color: $twitterBlue;
+    opacity: 0;
+    &.show {
+        transform: rotate(65deg) translate(130px) rotate(-65deg);
+        transition: all .2s ease-in-out;
+        opacity: 1;
+    }
+}
+
+.fa-codepen {
+    background-color: #000;
+    opacity: 0;
+    &.show {
+        transform: rotate(90deg) translate(140px) rotate(90deg);
+        transition: all .2s ease-in-out;
+        opacity: 1;
+    }
+}
