@@ -1,0 +1,9 @@
+p {
+    margin: 50px;
+    font-size: 1.3rem;
+    font-family: sans-serif;
+}
+
+.container {
+    float:left;
+}

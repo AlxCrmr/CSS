@@ -2,14 +2,25 @@ var playPause = anime({
     targets: 'div.box',
     translateY: [
         {value: 200, duration: 500},
-        {value: 0, duration: 800}
+        {value: 100, duration: 800},
+        {value: 0, duration: 1200}
+    ],
+  translateX: [
+        {value: 200, duration: 500},
+        {value: -50, duration: 800},
+        {value: 0, duration: 1200}
     ],
     rotate: {
-        value: '1turn',
+        value: '2turn',
         easing: 'easeInOutSine'
 },
-delay: function(target, index, totalTargets){return index * 1000},
-autoplay: false,
+  borderRadius: [
+    {value: 20, duration: 800},
+    {value: 0, duration: 500}
+  ],
+
+delay: function(target, index, totalTargets){return index * 1200},
+autoplay: true,
 loop: true
 });
 
